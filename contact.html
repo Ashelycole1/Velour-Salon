@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Velour Salon Kampala — operational hours, location details, and inquiry form for custom styling, bridal, and salon services." />
+  <title>Contact Us | Velour Salon</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="theme.js"></script>
+  <style>
+    /* Contact page layout styles */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1.8fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+    .contact-info-card {
+      background: var(--stone);
+      border: 1px solid var(--border-clr);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+    }
+    .contact-info-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text-title);
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-clr);
+      padding-bottom: 0.75rem;
+    }
+    .contact-detail-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .contact-detail-item i {
+      color: var(--accent-hover);
+      font-size: 1.1rem;
+      margin-top: 0.2rem;
+      width: 20px;
+      text-align: center;
+    }
+    .contact-detail-item div h4 {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-title);
+      margin-bottom: 0.25rem;
+    }
+    .contact-detail-item div p {
+      font-size: 0.88rem;
+      color: var(--text-color);
+      line-height: 1.5;
+    }
+    .map-placeholder {
+      width: 100%;
+      height: 200px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-clr);
+      border-radius: var(--radius-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.5rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .map-placeholder i {
+      font-size: 2rem;
+      color: var(--accent-hover);
+      margin-bottom: 0.5rem;
+    }
+    .map-placeholder span {
+      font-size: 0.75rem;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+    .contact-form-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-clr);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+    }
+    @media (max-width: 576px) {
+      .contact-form-card {
+        padding: 1.5rem;
+      }
+    }
+    .contact-form-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--text-title);
+      margin-bottom: 1.5rem;
+    }
+    .form-success {
+      display: none;
+      background: var(--stone);
+      border: 1px solid var(--border-clr);
+      padding: 1.25rem;
+      border-radius: var(--radius-sm);
+      color: var(--text-title);
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+        VELOUR<span>SALON</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="services.html" id="nav-services">Services</a></li>
+        <li><a href="stylists.html" id="nav-stylists">Stylists</a></li>
+        <li><a href="gallery.html" id="nav-gallery">Gallery</a></li>
+        <li><a href="contact.html" class="active" id="nav-contact">Contact</a></li>
+        <li><a href="booking.html" class="btn btn-primary nav-cta" id="nav-cta-btn">Book Appointment</a></li>
+
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Mode">
+            <i class="fa-regular fa-sun" id="sun-icon"></i>
+            <i class="fa-regular fa-moon" id="moon-icon" style="display:none;"></i>
+          </button>
+        </li>
+      </ul>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="stylists.html">Stylists</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:0.5rem;">Book Appointment</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header" id="page-header">
+    <div class="container">
+      <p class="eyebrow">Get in Touch</p>
+      <h1>Contact Velour</h1>
+      <p>Whether you have a question about our services, want to request a bridal package, or need help with a booking, we're here to help.</p>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" id="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- LEFT: Info Details -->
+        <aside aria-label="Contact information">
+          <div class="contact-info-card">
+            <h3>Atelier Details</h3>
+            
+            <div class="contact-detail-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Plot 14 Kampala Road<br>Kampala, Uganda</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h4>Phone Number</h4>
+                <p>+256 700 123 456<br>+256 788 987 654</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h4>Email Address</h4>
+                <p>hello@veloursalon.ug<br>bookings@veloursalon.ug</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <h4>Operational Hours</h4>
+                <p>Monday – Saturday: 8:00 AM – 8:00 PM<br>Sunday: Closed (Available for bridal events)</p>
+              </div>
+            </div>
+
+            <div class="map-placeholder" id="salon-map">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <h4>Plot 14 Kampala Road</h4>
+              <span>Kampala Center, Opp. City Square</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT: Inquiry Form -->
+        <main class="contact-form-card" aria-labelledby="form-heading">
+          <h3 id="form-heading">Send Us a Message</h3>
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+              
+              <div class="form-group" id="group-name">
+                <label for="contact-name">Full Name <span style="color:var(--accent-hover)">*</span></label>
+                <input type="text" id="contact-name" name="name" placeholder="e.g. Aisha Namukasa" required autocomplete="name">
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label for="contact-email">Email Address <span style="color:var(--accent-hover)">*</span></label>
+                <input type="email" id="contact-email" name="email" placeholder="you@example.com" required autocomplete="email">
+              </div>
+
+              <div class="form-group" id="group-phone">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone" placeholder="+256 7XX XXX XXX" autocomplete="tel">
+              </div>
+
+              <div class="form-group" id="group-subject">
+                <label for="contact-subject">Subject <span style="color:var(--accent-hover)">*</span></label>
+                <select id="contact-subject" name="subject" required>
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="bridal">Bridal &amp; Special Events</option>
+                  <option value="corporate">Corporate Packages</option>
+                  <option value="feedback">Feedback / Review</option>
+                  <option value="careers">Careers / Stylist Positions</option>
+                </select>
+              </div>
+
+              <div class="form-group form-col-2" id="group-message">
+                <label for="contact-message">Message <span style="color:var(--accent-hover)">*</span></label>
+                <textarea id="contact-message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+              </div>
+
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width: 100%;">Send Inquiry</button>
+            </div>
+
+            <div class="form-success" id="contact-success-msg" role="alert">
+              Thank you for contacting us! We've received your message and will respond within 24 business hours.
+            </div>
+          </form>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+            VELOUR<span>SALON</span>
+          </a>
+          <p>Kampala's premier destination for hair and beauty services, proudly serving men and women since 2021.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="stylists.html">Our Stylists</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Women's Packages</a></li>
+            <li><a href="services.html">Men's Packages</a></li>
+            <li><a href="services.html">Braids &amp; Locs</a></li>
+            <li><a href="services.html">Colour Treatments</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><span>Address:</span><span>Plot 14 Kampala Road, Uganda</span></div>
+          <div class="footer-contact-item"><span>Tel:</span><span>+256 700 123 456</span></div>
+          <div class="footer-contact-item"><span>Email:</span><span>hello@veloursalon.ug</span></div>
+          <div class="footer-contact-item"><span>Hours:</span><span>Mon–Sat: 8:00 AM – 8:00 PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Velour Salon. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      mobileNav.setAttribute('aria-hidden', !isOpen);
+    });
+
+    // Form submit simulation
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('contact-submit-btn');
+    const successMsg = document.getElementById('contact-success-msg');
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Basic validation check
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const subject = document.getElementById('contact-subject').value;
+        const message = document.getElementById('contact-message').value.trim();
+
+        if (!name || !email || !subject || !message) {
+          alert('Please fill out all required fields marked with *');
+          return;
+        }
+
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          successMsg.style.display = 'block';
+          form.reset();
+          submitBtn.textContent = 'Send Inquiry';
+          submitBtn.disabled = false;
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          
+          setTimeout(() => {
+            successMsg.style.display = 'none';
+          }, 5000);
+        }, 1000);
+      });
+    }
+  </script>
+
+</body>
+</html>
