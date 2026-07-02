@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse Velour Salon's full service catalog — premium atelier services for men and women including cuts, colour, braids, and grooming." />
+  <title>Services | Velour Salon</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Theme Switcher Script (Head inclusion prevents flash) -->
+  <script src="theme.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+        VELOUR<span>SALON</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="services.html" class="active" id="nav-services">Services</a></li>
+        <li><a href="stylists.html" id="nav-stylists">Stylists</a></li>
+        <li><a href="gallery.html" id="nav-gallery">Gallery</a></li>
+        <li><a href="contact.html" id="nav-contact">Contact</a></li>
+        <li><a href="booking.html" class="btn btn-primary nav-cta" id="nav-cta-btn">Book Appointment</a></li>
+
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="stylists.html">Stylists</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:0.5rem;">Book Appointment</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header" id="page-header">
+    <div class="container">
+      <p class="eyebrow">What We Offer</p>
+      <h1>Our Service Catalog</h1>
+      <p>Transparent pricing. Premium results. Choose a service that fits your style — for men and women.</p>
+    </div>
+  </header>
+
+  <!-- FILTER ROW -->
+  <section class="section-sm" id="services-section" aria-labelledby="services-heading">
+    <div class="container">
+      <h2 class="section-title text-center" id="services-heading">All Services</h2>
+      <p class="section-lede text-center">Use the filters to browse by category or gender.</p>
+
+      <div class="filter-row" role="group" aria-label="Filter services">
+        <button class="filter-btn active" id="filter-all"     data-filter="all">All Services</button>
+        <button class="filter-btn"        id="filter-women"   data-filter="women">Women</button>
+        <button class="filter-btn"        id="filter-men"     data-filter="men">Men</button>
+        <button class="filter-btn"        id="filter-colour"  data-filter="colour">Colour</button>
+        <button class="filter-btn"        id="filter-braids"  data-filter="braids">Braids &amp; Locs</button>
+        <button class="filter-btn"        id="filter-grooming" data-filter="grooming">Grooming</button>
+        <button class="filter-btn"        id="filter-images"   data-filter="images">Hairstyles</button>
+      </div>
+
+
+
+      <!-- ── HAIRSTYLE GALLERY (Hidden by Default) ── -->
+      <div id="hairstyle-gallery" style="display: none;">
+        <h3 class="gallery-heading">Women's Hairstyles</h3>
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <img src="assets/images/women/women's style 1.jpg" alt="Braided Updo">
+            <figcaption>
+              <h4>Braided Updo</h4>
+              <p>Elegant formal styling.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card gallery-item-tall">
+            <img src="assets/images/women/women's style 2.jpg" alt="Vivid Colour">
+            <figcaption>
+              <h4>Vivid Colour</h4>
+              <p>Bold transformations.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/images/women/women's style 3.jpg" alt="Knotless Braids">
+            <figcaption>
+              <h4>Knotless Braids</h4>
+              <p>Low-tension protective style.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/images/women/women's style 4.jpg" alt="Silk Press">
+            <figcaption>
+              <h4>Silk Press</h4>
+              <p>Smooth, high-shine styling.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card gallery-item-tall">
+            <img src="assets/images/women/women's style 5.jpg" alt="Soft Curls">
+            <figcaption>
+              <h4>Soft Curls</h4>
+              <p>Glamorous waves and curls.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/images/women/women's style 6.jpg" alt="Short Cut">
+            <figcaption>
+              <h4>Short Pixie</h4>
+              <p>Modern and edgy short cut.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <h3 class="gallery-heading" style="margin-top: 4rem;">Men's Hairstyles</h3>
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-item-tall">
+            <img src="assets/images/men/men's style 1.jpg" alt="Classic Fade">
+            <figcaption>
+              <h4>Classic Fade</h4>
+              <p>Precision taper finish.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/images/men/men's style 2.jpg" alt="Modern Pompadour">
+            <figcaption>
+              <h4>Modern Pompadour</h4>
+              <p>Classic volume, modern twist.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/images/men/men's style 3.jpg" alt="Beard Sculpting">
+            <figcaption>
+              <h4>Beard Sculpting</h4>
+              <p>Expert shaping and grooming.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card gallery-item-tall">
+            <img src="assets/images/men/men's style 4.jpg" alt="Buzz Cut">
+            <figcaption>
+              <h4>Buzz Cut</h4>
+              <p>Clean, low-maintenance cut.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/images/men/men's style 5.jpg" alt="Long Hair Fade">
+            <figcaption>
+              <h4>Top Knot Fade</h4>
+              <p>Versatile long top with sharp sides.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/images/men/men's style 6.jpg" alt="Clean Shave">
+            <figcaption>
+              <h4>Clean Shave</h4>
+              <p>Smooth, professional finish.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- ── SERVICE PACKAGES LIST ── -->
+      <div id="packages-list">
+        
+        <!-- Category: Hair & Styling -->
+        <div class="service-category-section" id="cat-hair">
+          <h3 class="service-category">Hair &amp; Styling</h3>
+          <div class="service-list">
+            
+            <div class="service-row" data-category="women" data-id="wash-blowout">
+              <div class="service-details">
+                <h4 class="service-name">Wash &amp; Blowout</h4>
+                <p class="service-desc">Deep cleansing shampoo, moisturising conditioner treatment, professional blow-dry &amp; style, and scalp massage.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">45 min</span>
+                <span class="service-price">UGX 45,000</span>
+                <a href="booking.html?service=wash-blowout" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="women" data-id="weave-install">
+              <div class="service-details">
+                <h4 class="service-name">Weave Installation</h4>
+                <p class="service-desc">Cornrow foundation braid, sew-in or glue-in installation, leave-out blend &amp; style finish.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">2 hr</span>
+                <span class="service-price">UGX 90,000</span>
+                <a href="booking.html?service=weave-install" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="men grooming" data-id="classic-cut">
+              <div class="service-details">
+                <h4 class="service-name">Classic Haircut</h4>
+                <p class="service-desc">Precision scissor or clipper cut, wash &amp; towel dry, styling product finish, and clean neck shave.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">30 min</span>
+                <span class="service-price">UGX 30,000</span>
+                <a href="booking.html?service=classic-cut" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="men grooming" data-id="fade-cut">
+              <div class="service-details">
+                <h4 class="service-name">Fade &amp; Taper</h4>
+                <p class="service-desc">Low, mid, or high fade of choice, blended taper at the neckline, clean line-up, and styling product finish.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">45 min</span>
+                <span class="service-price">UGX 35,000</span>
+                <a href="booking.html?service=fade-cut" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Category: Color -->
+        <div class="service-category-section" id="cat-colour">
+          <h3 class="service-category">Color</h3>
+          <div class="service-list">
+
+            <div class="service-row" data-category="women colour" data-id="colour-highlights">
+              <div class="service-details">
+                <h4 class="service-name">Colour &amp; Highlights</h4>
+                <p class="service-desc">Full custom colour or highlights of choice, toning &amp; glossing treatment, with wash &amp; blowout included.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">2.5 hr</span>
+                <span class="service-price">UGX 120,000</span>
+                <a href="booking.html?service=colour-highlights" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="women colour" data-id="balayage">
+              <div class="service-details">
+                <h4 class="service-name">Balayage &amp; Ombré</h4>
+                <p class="service-desc">Hand-painted balayage or ombré, toner for a seamless blend, deep conditioning mask, and blow-dry finish.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">3 hr</span>
+                <span class="service-price">UGX 160,000</span>
+                <a href="booking.html?service=balayage" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="women colour" data-id="global-colour">
+              <div class="service-details">
+                <h4 class="service-name">Global Colour (Full Tint)</h4>
+                <p class="service-desc">Single solid colour application for full head coverage, deep conditioning treatment, and professional blowout &amp; style.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">2 hr</span>
+                <span class="service-price">UGX 100,000</span>
+                <a href="booking.html?service=global-colour" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="women colour" data-id="root-touchup">
+              <div class="service-details">
+                <h4 class="service-name">Root Touch-Up</h4>
+                <p class="service-desc">Regrowth coverage (up to 2 inches) with seamless colour blending, scalp protection, and wash &amp; style finish.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">1.5 hr</span>
+                <span class="service-price">UGX 70,000</span>
+                <a href="booking.html?service=root-touchup" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Category: Braids & Locs -->
+        <div class="service-category-section" id="cat-braids">
+          <h3 class="service-category">Braids &amp; Locs</h3>
+          <div class="service-list">
+
+            <div class="service-row" data-category="women braids" data-id="box-braids">
+              <div class="service-details">
+                <h4 class="service-name">Box Braids</h4>
+                <p class="service-desc">Classic protective box braids in any length (short, medium, or long) with pre-stretched extensions, scalp oiling, and edge lay.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">3 hr</span>
+                <span class="service-price">UGX 80,000</span>
+                <a href="booking.html?service=box-braids" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="women braids" data-id="knotless-braids">
+              <div class="service-details">
+                <h4 class="service-name">Knotless Braids</h4>
+                <p class="service-desc">Tension-free knotless technique for a lightweight, natural-looking start. Available in any size or length.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">4 hr</span>
+                <span class="service-price">UGX 100,000</span>
+                <a href="booking.html?service=knotless-braids" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="women braids" data-id="cornrows">
+              <div class="service-details">
+                <h4 class="service-name">Cornrows / Tribal Braids</h4>
+                <p class="service-desc">Classic back or tribal cornrow designs using feed-in technique for a natural look, scalp hydration treatment, and edge control.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">2 hr</span>
+                <span class="service-price">UGX 75,000</span>
+                <a href="booking.html?service=cornrows" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="braids" data-id="dreadlock-install">
+              <div class="service-details">
+                <h4 class="service-name">Dreadlock Install</h4>
+                <p class="service-desc">Comb-twist or interlocking method starter locs for all hair types. Includes scalp treatment, aftercare advice, and starter kit.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">3 hr</span>
+                <span class="service-price">UGX 150,000</span>
+                <a href="booking.html?service=dreadlock-install" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="braids" data-id="loc-retwist">
+              <div class="service-details">
+                <h4 class="service-name">Loc Retwist</h4>
+                <p class="service-desc">Full retwist maintenance, wash &amp; deep condition, root tightening, and loc moisturising treatment.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">1.5 hr</span>
+                <span class="service-price">UGX 60,000</span>
+                <a href="booking.html?service=loc-retwist" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="women braids" data-id="sisterlocks">
+              <div class="service-details">
+                <h4 class="service-name">Sisterlocks</h4>
+                <p class="service-desc">Genuine Sisterlocks™ installation with precision grid patterning and interlocking technique. Includes official starter kit.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">6 hr</span>
+                <span class="service-price">UGX 250,000</span>
+                <a href="booking.html?service=sisterlocks" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Category: Grooming -->
+        <div class="service-category-section" id="cat-grooming">
+          <h3 class="service-category">Grooming</h3>
+          <div class="service-list">
+
+            <div class="service-row" data-category="men grooming" data-id="beard-trim">
+              <div class="service-details">
+                <h4 class="service-name">Beard Trim &amp; Shape</h4>
+                <p class="service-desc">Outline &amp; sculpt shaping, hot towel treatment, clean cheek line shave, and moisturising beard balm.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">30 min</span>
+                <span class="service-price">UGX 20,000</span>
+                <a href="booking.html?service=beard-trim" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+            <div class="service-row" data-category="men grooming" data-id="cut-beard-combo">
+              <div class="service-details">
+                <h4 class="service-name">Cut &amp; Beard Combo</h4>
+                <p class="service-desc">Full haircut of any style combined with a precision beard trim, shaping, hot towel, and razor finish.</p>
+              </div>
+              <div class="service-meta">
+                <span class="service-time">1 hr</span>
+                <span class="service-price">UGX 45,000</span>
+                <a href="booking.html?service=cut-beard-combo" class="service-book-link">Book</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /packages-list -->
+
+      <!-- CTA Strip -->
+      <div class="cta-strip text-center" style="margin-top:3rem;border-radius:var(--radius-md);">
+        <p class="eyebrow">Ready to get started?</p>
+        <h3 style="font-family:var(--font-display);font-size:2rem;color:var(--text-title);font-weight:500;margin-bottom:0.75rem;">Book Your Session Now</h3>
+        <p style="color:var(--text-color);margin-bottom:1.5rem;opacity:0.85;">Pick any service above, choose your stylist, and reserve your preferred time slot online.</p>
+        <a href="booking.html" class="btn btn-primary" id="services-book-cta">Make a Reservation</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+            VELOUR<span>SALON</span>
+          </a>
+          <p>Kampala's premier destination for hair and beauty services, proudly serving men and women since 2021.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="stylists.html">Our Stylists</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Women's Packages</a></li>
+            <li><a href="services.html">Men's Packages</a></li>
+            <li><a href="services.html">Braids &amp; Locs</a></li>
+            <li><a href="services.html">Colour Treatments</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><span>Address:</span><span>Plot 14 Kampala Road, Uganda</span></div>
+          <div class="footer-contact-item"><span>Tel:</span><span>+256 700 123 456</span></div>
+          <div class="footer-contact-item"><span>Email:</span><span>hello@veloursalon.ug</span></div>
+          <div class="footer-contact-item"><span>Hours:</span><span>Mon–Sat: 8:00 AM – 8:00 PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Velour Salon. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      mobileNav.setAttribute('aria-hidden', !isOpen);
+    });
+
+    // Filter buttons
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const rows       = document.querySelectorAll('.service-row');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        const packagesList = document.getElementById('packages-list');
+        const galleryGrid = document.getElementById('hairstyle-gallery');
+
+        if (filter === 'images') {
+          packagesList.style.display = 'none';
+          galleryGrid.style.display = 'block';
+        } else {
+          packagesList.style.display = 'block';
+          galleryGrid.style.display = 'none';
+
+          rows.forEach(row => {
+            const cats = (row.getAttribute('data-category') || '').split(' ');
+            if (filter === 'all' || cats.includes(filter)) {
+              row.style.display = 'flex';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+
+          // Show/hide category sections based on whether they contain visible rows
+          document.querySelectorAll('.service-category-section').forEach(section => {
+            const hasVisibleRows = Array.from(section.querySelectorAll('.service-row'))
+              .some(r => r.style.display !== 'none');
+            section.style.display = hasVisibleRows ? 'block' : 'none';
+          });
+        }
+      });
+    });
+
+    // Pre-select filter from URL hash (e.g. services.html#women)
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      const matchBtn = document.querySelector(`.filter-btn[data-filter="${hash}"]`);
+      if (matchBtn) matchBtn.click();
+    }
+
+  </script>
+
+</body>
+</html>
