@@ -1244,4 +1244,17 @@ ul { list-style: none; }
   .gallery-card img {
     height: 300px;
   }
+  
+  .service-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .service-meta {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .service-details {
+    padding-right: 0;
+  }
 }

@@ -9,17 +9,19 @@
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+  const themeToggles = document.querySelectorAll('.theme-toggle');
 
   // Function to update icon based on theme
   const updateIcon = (theme) => {
-    if (!themeIcon) return;
-    if (theme === 'dark') {
-      themeIcon.className = 'fas fa-sun'; // Sun for dark mode
-    } else {
-      themeIcon.className = 'fas fa-moon'; // Moon for light mode
-    }
+    themeToggles.forEach(toggle => {
+      const themeIcon = toggle.querySelector('i');
+      if (!themeIcon) return;
+      if (theme === 'dark') {
+        themeIcon.className = 'fas fa-sun'; // Sun for dark mode
+      } else {
+        themeIcon.className = 'fas fa-moon'; // Moon for light mode
+      }
+    });
   };
 
   // Initial icon state
@@ -27,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   updateIcon(currentTheme);
 
   // Toggle theme on click
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
+  themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
       const next = current === 'dark' ? 'light' : 'dark';
       
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('velour-theme', next);
       updateIcon(next);
     });
-  }
+  });
 
   // 4. Navbar Scroll Shadow
   const navbar = document.querySelector('.navbar');
