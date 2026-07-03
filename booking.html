@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Book a hair or beauty appointment at Velour Salon Kampala. Choose your service, stylist, and preferred date and time." />
+  <meta name="description"
+    content="Book a hair or beauty appointment at Velour Salon Kampala. Choose your service, stylist, and preferred date and time." />
   <title>Book Appointment | Velour Salon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -13,12 +21,13 @@
   <style>
     /* Extra booking-page styles */
     .policy-box {
-      background: var(--stone);
+      background: var(--cta-bg);
       border: 1px solid var(--border-clr);
       border-radius: var(--radius-md);
       padding: 1.25rem 1.5rem;
       margin-top: 1.5rem;
     }
+
     .policy-box h4 {
       font-family: var(--font-body);
       font-size: 0.85rem;
@@ -28,11 +37,13 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
     .policy-box ul {
       display: flex;
       flex-direction: column;
       gap: 0.45rem;
     }
+
     .policy-box ul li {
       font-size: 0.82rem;
       color: var(--text-color);
@@ -41,7 +52,12 @@
       gap: 0.5rem;
       align-items: flex-start;
     }
-    .policy-box ul li::before { content: '•'; color: var(--accent-color); }
+
+    .policy-box ul li::before {
+      content: '•';
+      color: var(--accent-color);
+    }
+
     .rating-row {
       display: flex;
       align-items: center;
@@ -53,13 +69,15 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+        <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo"
+          loading="lazy">
         VELOUR<span>SALON</span>
       </a>
       <ul class="nav-links">
@@ -89,6 +107,10 @@
     <a href="stylists.html">Stylists</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
+    <button class="theme-toggle" id="mobile-theme-toggle"
+      style="margin: 0.5rem auto 0; display: flex; gap: 0.5rem; justify-content: center; align-items: center; width: 100%; border: 1px solid var(--border-clr); padding: 0.75rem; border-radius: var(--radius-sm); background: transparent; color: var(--text-color); font-family: var(--font-body); font-size: 1rem; cursor: pointer;">
+      <i class="fas fa-moon"></i> Theme
+    </button>
     <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:0.5rem;">Book Appointment</a>
   </div>
 
@@ -132,7 +154,8 @@
         <!-- LEFT: Info Panel -->
         <aside aria-label="Booking information">
           <h3 id="booking-form-title">Appointment Details</h3>
-          <p>All bookings are finalized via phone or email. Please arrive 5 minutes before your scheduled appointment.</p>
+          <p>All bookings are finalized via phone or email. Please arrive 5 minutes before your scheduled appointment.
+          </p>
 
           <div class="info-items" id="info-items">
             <div class="info-item">
@@ -177,11 +200,11 @@
         <!-- RIGHT: Booking Form -->
         <div class="booking-form-card" id="booking-form-card">
           <form id="booking-form" novalidate aria-labelledby="booking-form-title">
-            
+
             <!-- STEP 1: SERVICE & STYLIST -->
             <div class="step-panel active" id="step-panel-1">
               <div class="form-grid">
-                
+
                 <!-- Service Category -->
                 <div class="form-group form-col-2" id="group-category">
                   <label for="service-category">Select Service <span style="color:var(--accent-hover)">*</span></label>
@@ -244,9 +267,10 @@
                 <div class="calendar-container" id="calendar-grid">
                   <!-- JS will populate date buttons -->
                 </div>
-                
+
                 <div id="slots-wrapper" style="display:none;">
-                  <h4 style="font-size:0.9rem; color:var(--text-color); margin-bottom:0.5rem; font-weight:600;">Available Slots</h4>
+                  <h4 style="font-size:0.9rem; color:var(--text-color); margin-bottom:0.5rem; font-weight:600;">
+                    Available Slots</h4>
                   <div class="slots-container" id="time-slots">
                     <!-- JS will populate slot buttons -->
                   </div>
@@ -259,18 +283,20 @@
 
               <div class="step-actions">
                 <button type="button" class="btn btn-ghost prev-step-btn" data-prev="1">Back</button>
-                <button type="button" class="btn btn-primary next-step-btn" data-next="3" id="step2-next" disabled>Next Step</button>
+                <button type="button" class="btn btn-primary next-step-btn" data-next="3" id="step2-next" disabled>Next
+                  Step</button>
               </div>
             </div>
 
             <!-- STEP 3: DETAILS -->
             <div class="step-panel" id="step-panel-3">
               <div class="form-grid">
-                
+
                 <!-- Full Name -->
                 <div class="form-group" id="group-fullname">
                   <label for="fullname">Full Name <span style="color:var(--accent-hover)">*</span></label>
-                  <input type="text" id="fullname" name="fullname" placeholder="e.g. Aisha Namukasa" required autocomplete="name">
+                  <input type="text" id="fullname" name="fullname" placeholder="e.g. Aisha Namukasa" required
+                    autocomplete="name">
                 </div>
 
                 <!-- Phone -->
@@ -313,13 +339,15 @@
                 <!-- Special Requests -->
                 <div class="form-group form-col-2" id="group-notes">
                   <label for="notes">Special Requests / Notes</label>
-                  <textarea id="notes" name="notes" placeholder="Any allergies, preferences, or additional details..."></textarea>
+                  <textarea id="notes" name="notes"
+                    placeholder="Any allergies, preferences, or additional details..."></textarea>
                 </div>
 
               </div>
               <div class="step-actions">
                 <button type="button" class="btn btn-ghost prev-step-btn" data-prev="2">Back</button>
-                <button type="button" class="btn btn-primary next-step-btn" data-next="4" id="step3-next">Next Step</button>
+                <button type="button" class="btn btn-primary next-step-btn" data-next="4" id="step3-next">Next
+                  Step</button>
               </div>
             </div>
 
@@ -356,10 +384,13 @@
               </div>
 
               <!-- Terms -->
-              <div class="form-group form-col-2" id="group-terms" style="flex-direction:row;align-items:center;gap:0.75rem;margin-bottom:1.5rem;">
-                <input type="checkbox" id="terms" name="terms" required style="width:18px;height:18px;accent-color:var(--amber);flex-shrink:0;">
+              <div class="form-group form-col-2" id="group-terms"
+                style="flex-direction:row;align-items:center;gap:0.75rem;margin-bottom:1.5rem;">
+                <input type="checkbox" id="terms" name="terms" required
+                  style="width:18px;height:18px;accent-color:var(--amber);flex-shrink:0;">
                 <label for="terms" style="font-size:0.83rem;color:var(--text-color);opacity:0.9;cursor:pointer;">
-                  I agree to the salon's booking policies and understand that cancellations must be made at least 2 hours in advance.
+                  I agree to the salon's booking policies and understand that cancellations must be made at least 2
+                  hours in advance.
                 </label>
               </div>
 
@@ -368,7 +399,8 @@
                   <button type="button" class="btn btn-ghost prev-step-btn" style="flex:1;" data-prev="3">Back</button>
                   <button type="submit" class="btn btn-primary" style="flex:2;" id="submit-btn">Confirm Online</button>
                 </div>
-                <button type="button" class="btn btn-whatsapp" id="whatsapp-btn" style="width:100%; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+                <button type="button" class="btn btn-whatsapp" id="whatsapp-btn"
+                  style="width:100%; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
                   <i class="fab fa-whatsapp"></i> Confirm &amp; Send via WhatsApp
                 </button>
               </div>
@@ -392,7 +424,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+            <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo"
+              loading="lazy">
             VELOUR<span>SALON</span>
           </a>
           <p>Kampala's premier destination for hair and beauty services, proudly serving men and women since 2021.</p>
@@ -433,18 +466,18 @@
 
   <script>
     // --- Select Elements ---
-    const hamburger      = document.getElementById('hamburger-btn');
-    const mobileNav      = document.getElementById('mobile-nav');
-    const calendarGrid   = document.getElementById('calendar-grid');
-    const slotsWrapper   = document.getElementById('slots-wrapper');
-    const timeSlots      = document.getElementById('time-slots');
-    const apptDateInput  = document.getElementById('appt-date');
-    const apptTimeInput  = document.getElementById('appt-time');
-    const stylistSelect  = document.getElementById('stylist');
-    const step2NextBtn   = document.getElementById('step2-next');
-    const submitBtn      = document.getElementById('submit-btn');
-    const form           = document.getElementById('booking-form');
-    const successMsg     = document.getElementById('success-msg');
+    const hamburger = document.getElementById('hamburger-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const calendarGrid = document.getElementById('calendar-grid');
+    const slotsWrapper = document.getElementById('slots-wrapper');
+    const timeSlots = document.getElementById('time-slots');
+    const apptDateInput = document.getElementById('appt-date');
+    const apptTimeInput = document.getElementById('appt-time');
+    const stylistSelect = document.getElementById('stylist');
+    const step2NextBtn = document.getElementById('step2-next');
+    const submitBtn = document.getElementById('submit-btn');
+    const form = document.getElementById('booking-form');
+    const successMsg = document.getElementById('success-msg');
 
     // --- Wizard step switcher ---
     let currentStep = 1;
@@ -456,7 +489,7 @@
 
     function goToStep(step) {
       if (step < 1 || step > totalSteps) return;
-      
+
       // Update panels visibility
       stepPanels.forEach(panel => {
         panel.classList.remove('active');
@@ -491,7 +524,7 @@
     document.querySelectorAll('.next-step-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const targetStep = parseInt(btn.getAttribute('data-next'));
-        
+
         // Step validation before advancing
         if (currentStep === 1) {
           const service = document.getElementById('service-category').value;
@@ -515,7 +548,7 @@
             alert('Please fill out all required fields (Name, Phone, and Gender).');
             return;
           }
-          
+
           // Generate summary for Step 4
           updateSummary();
         }
@@ -534,7 +567,7 @@
     function updateSummary() {
       const serviceSelect = document.getElementById('service-category');
       const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
-      
+
       const stylistSelect = document.getElementById('stylist');
       const stylistText = stylistSelect.options[stylistSelect.selectedIndex].text;
 
@@ -577,14 +610,14 @@
       calendarGrid.innerHTML = ''; // Clear fallback
       const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
       const today = new Date();
-      
+
       for (let i = 0; i < 7; i++) {
         const date = new Date();
         date.setDate(today.getDate() + i);
         if (date.getDay() === 0) continue; // Skip Sundays
 
         const dateString = date.toISOString().split('T')[0];
-        
+
         // Create accessible buttons instead of divs
         const dayCard = document.createElement('button');
         dayCard.type = 'button';
@@ -592,7 +625,7 @@
         dayCard.setAttribute('aria-checked', 'false');
         dayCard.className = 'calendar-day';
         dayCard.innerHTML = `<span class="day-name">${days[date.getDay()]}</span><span class="day-date">${date.getDate()}</span>`;
-        
+
         dayCard.addEventListener('click', () => {
           document.querySelectorAll('.calendar-day').forEach(d => {
             d.classList.remove('active');
@@ -614,17 +647,17 @@
       timeSlots.innerHTML = '';
       const stylist = stylistSelect.value;
       const hours = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
-      
+
       hours.forEach(time => {
         const isBooked = bookedAppointments.some(app => app.date === date && app.time === time && app.stylist === stylist);
-        
+
         const slot = document.createElement('button');
         slot.type = 'button';
         slot.role = 'radio';
         slot.setAttribute('aria-checked', 'false');
         slot.className = `time-slot ${isBooked ? 'booked' : 'available'}`;
         slot.textContent = time;
-        
+
         if (isBooked) {
           slot.disabled = true;
           slot.setAttribute('aria-disabled', 'true');
@@ -687,7 +720,7 @@
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const termsChecked = document.getElementById('terms').checked;
         if (!termsChecked) {
           alert('You must agree to the booking policies to confirm.');
@@ -706,7 +739,7 @@
 
           successMsg.style.display = 'block';
           form.reset();
-          
+
           document.querySelectorAll('.calendar-day').forEach(d => {
             d.classList.remove('active');
             d.setAttribute('aria-checked', 'false');
@@ -715,7 +748,7 @@
           submitBtn.textContent = 'Confirm Online';
           submitBtn.disabled = false;
           successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          
+
           // Reset to step 1 after 3 seconds
           setTimeout(() => {
             goToStep(1);
@@ -756,8 +789,8 @@
         if (notes.trim()) {
           message += `• Special Notes: ${notes}\n`;
         }
-        
-        const url = `https://wa.me/2567670245153?text=${encodeURIComponent(message)}`;
+
+        const url = `https://wa.me/256767024153?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
       });
     }
@@ -765,4 +798,5 @@
   </script>
 
 </body>
+
 </html>
