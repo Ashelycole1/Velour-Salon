@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Contact Velour Salon Kampala — operational hours, location details, and inquiry form for custom styling, bridal, and salon services." />
   <title>Contact Us | Velour Salon</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -24,7 +28,7 @@
       }
     }
     .contact-info-card {
-      background: var(--stone);
+      background: var(--cta-bg);
       border: 1px solid var(--border-clr);
       border-radius: var(--radius-md);
       padding: 2rem;
@@ -107,7 +111,7 @@
     }
     .form-success {
       display: none;
-      background: var(--stone);
+      background: var(--cta-bg);
       border: 1px solid var(--border-clr);
       padding: 1.25rem;
       border-radius: var(--radius-sm);
@@ -124,7 +128,7 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+        <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo" loading="lazy">
         VELOUR<span>SALON</span>
       </a>
       <ul class="nav-links">
@@ -156,6 +160,9 @@
     <a href="stylists.html">Stylists</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html" class="active">Contact</a>
+    <button class="theme-toggle" id="mobile-theme-toggle" style="margin: 0.5rem auto 0; display: flex; gap: 0.5rem; justify-content: center; align-items: center; width: 100%; border: 1px solid var(--border-clr); padding: 0.75rem; border-radius: var(--radius-sm); background: transparent; color: var(--text-color); font-family: var(--font-body); font-size: 1rem; cursor: pointer;">
+      <i class="fas fa-moon"></i> Theme
+    </button>
     <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:0.5rem;">Book Appointment</a>
   </div>
 
@@ -278,7 +285,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+            <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo" loading="lazy">
             VELOUR<span>SALON</span>
           </a>
           <p>Kampala's premier destination for hair and beauty services, proudly serving men and women since 2021.</p>
