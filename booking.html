@@ -15,9 +15,11 @@
     rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
   <!-- Theme Switcher Script (Head inclusion prevents flash) -->
-  <script src="theme.js"></script>
+    <script>!function(){var e=localStorage.getItem("velour-theme")||"light";document.documentElement.setAttribute("data-theme",e)}();</script>
+  <script src="theme.js" defer></script>
   <style>
     /* Extra booking-page styles */
     .policy-box {
@@ -76,7 +78,7 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo"
+        <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45"
           loading="lazy">
         VELOUR<span>SALON</span>
       </a>
@@ -256,7 +258,7 @@
 
               </div>
               <div class="step-actions">
-                <button type="button" class="btn btn-primary next-step-btn" data-next="2">Next Step</button>
+                <button type="button" id="step1-next" class="btn btn-primary next-step-btn" data-next="2">Next Step</button>
               </div>
             </div>
 
@@ -424,7 +426,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo"
+            <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45"
               loading="lazy">
             VELOUR<span>SALON</span>
           </a>
@@ -621,6 +623,7 @@
         // Create accessible buttons instead of divs
         const dayCard = document.createElement('button');
         dayCard.type = 'button';
+        dayCard.id = `calendar-day-${dateString}`;
         dayCard.role = 'radio';
         dayCard.setAttribute('aria-checked', 'false');
         dayCard.className = 'calendar-day';
@@ -653,6 +656,7 @@
 
         const slot = document.createElement('button');
         slot.type = 'button';
+        slot.id = `time-slot-${time.replace(':', '')}`;
         slot.role = 'radio';
         slot.setAttribute('aria-checked', 'false');
         slot.className = `time-slot ${isBooked ? 'booked' : 'available'}`;

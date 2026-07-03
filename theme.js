@@ -3,10 +3,7 @@
  */
 
 // 1. Apply saved theme before page renders to prevent flash
-(function () {
-  const savedTheme = localStorage.getItem('velour-theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-})();
+// Theme initialization is now inlined in HTML head
 
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggles = document.querySelectorAll('.theme-toggle');

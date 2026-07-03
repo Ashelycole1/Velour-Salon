@@ -11,8 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <script src="theme.js"></script>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <script>!function(){var e=localStorage.getItem("velour-theme")||"light";document.documentElement.setAttribute("data-theme",e)}();</script>
+  <script src="theme.js" defer></script>
   <style>
     /* Contact page layout styles */
     .contact-grid {
@@ -128,7 +130,7 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo" loading="lazy">
+        <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" loading="lazy">
         VELOUR<span>SALON</span>
       </a>
       <ul class="nav-links">
@@ -285,7 +287,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo" loading="lazy">
+            <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" loading="lazy">
             VELOUR<span>SALON</span>
           </a>
           <p>Kampala's premier destination for hair and beauty services, proudly serving men and women since 2021.</p>
