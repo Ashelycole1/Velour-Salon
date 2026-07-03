@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Meet the expert stylists at Velour Salon Kampala — certified professionals specialising in cuts, colour, braids, locs, and men's grooming." />
   <title>Our Stylists | Velour Salon</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -168,7 +172,7 @@
       border-color: var(--ivory);
     }
     .join-banner {
-      background: var(--stone);
+      background: var(--cta-bg);
       border: 1px solid var(--border-clr);
       border-radius: var(--radius-md);
       padding: 3rem 2rem;
@@ -197,7 +201,7 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+        <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo" loading="lazy">
         VELOUR<span>SALON</span>
       </a>
       <ul class="nav-links">
@@ -226,6 +230,9 @@
     <a href="stylists.html">Stylists</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
+    <button class="theme-toggle" id="mobile-theme-toggle" style="margin: 0.5rem auto 0; display: flex; gap: 0.5rem; justify-content: center; align-items: center; width: 100%; border: 1px solid var(--border-clr); padding: 0.75rem; border-radius: var(--radius-sm); background: transparent; color: var(--text-color); font-family: var(--font-body); font-size: 1rem; cursor: pointer;">
+      <i class="fas fa-moon"></i> Theme
+    </button>
     <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:0.5rem;">Book Appointment</a>
   </div>
 
@@ -259,7 +266,7 @@
         <!-- Amara Nakato -->
         <article class="stylist-full-card" id="card-amara" data-spec="women men">
           <div class="stylist-avatar f">
-            <img src="assets/images/women/female stylist 1.jpg" alt="Amara Nakato">
+            <img src="assets/images/women/female stylist 1.jpg" alt="Amara Nakato" width="400" height="400" loading="lazy">
             <span class="exp-badge">7 yrs exp</span>
           </div>
           <div class="stat-strip">
@@ -280,7 +287,7 @@
         <!-- David Ssemakula -->
         <article class="stylist-full-card" id="card-david" data-spec="men">
           <div class="stylist-avatar m">
-            <img src="assets/images/men/male stylist 1.jpg" alt="David Ssemakula">
+            <img src="assets/images/men/male stylist 1.jpg" alt="David Ssemakula" width="400" height="400" loading="lazy">
             <span class="exp-badge">5 yrs exp</span>
           </div>
           <div class="stat-strip">
@@ -301,7 +308,7 @@
         <!-- Grace Atim -->
         <article class="stylist-full-card" id="card-grace" data-spec="women colour">
           <div class="stylist-avatar f">
-            <img src="assets/images/women/female stylist 2.jpg" alt="Grace Atim">
+            <img src="assets/images/women/female stylist 2.jpg" alt="Grace Atim" width="400" height="400" loading="lazy">
             <span class="exp-badge">6 yrs exp</span>
           </div>
           <div class="stat-strip">
@@ -322,7 +329,7 @@
         <!-- Brian Kato -->
         <article class="stylist-full-card" id="card-brian" data-spec="men women braids">
           <div class="stylist-avatar m">
-            <img src="assets/images/men/male stylist 2.jpg" alt="Brian Kato">
+            <img src="assets/images/men/male stylist 2.jpg" alt="Brian Kato" width="400" height="400" loading="lazy">
             <span class="exp-badge">4 yrs exp</span>
           </div>
           <div class="stat-strip">
@@ -343,7 +350,7 @@
         <!-- Sarah Nambi -->
         <article class="stylist-full-card" id="card-sarah" data-spec="women braids">
           <div class="stylist-avatar f">
-            <img src="assets/images/women/female stylist 3.jpg" alt="Sarah Nambi">
+            <img src="assets/images/women/female stylist 3.jpg" alt="Sarah Nambi" width="400" height="400" loading="lazy">
             <span class="exp-badge">5 yrs exp</span>
           </div>
           <div class="stat-strip">
@@ -364,7 +371,7 @@
         <!-- James Okello -->
         <article class="stylist-full-card" id="card-james" data-spec="men">
           <div class="stylist-avatar m">
-            <img src="assets/images/men/male stylist 3.jpg" alt="James Okello">
+            <img src="assets/images/men/male stylist 3.jpg" alt="James Okello" width="400" height="400" loading="lazy">
             <span class="exp-badge">3 yrs exp</span>
           </div>
           <div class="stat-strip">
@@ -385,7 +392,7 @@
         <!-- Patience Akello -->
         <article class="stylist-full-card" id="card-patience" data-spec="women colour">
           <div class="stylist-avatar f">
-            <img src="assets/images/women/female stylist 4.jpg" alt="Patience Akello">
+            <img src="assets/images/women/female stylist 4.jpg" alt="Patience Akello" width="400" height="400" loading="lazy">
             <span class="exp-badge">8 yrs exp</span>
           </div>
           <div class="stat-strip">
@@ -406,7 +413,7 @@
         <!-- Moses Mugisha -->
         <article class="stylist-full-card" id="card-moses" data-spec="men women braids">
           <div class="stylist-avatar m">
-            <img src="assets/images/men/male stylist 4.jpg" alt="Moses Mugisha">
+            <img src="assets/images/men/male stylist 4.jpg" alt="Moses Mugisha" width="400" height="400" loading="lazy">
             <span class="exp-badge">6 yrs exp</span>
           </div>
           <div class="stat-strip">
@@ -443,7 +450,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+            <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo" loading="lazy">
             VELOUR<span>SALON</span>
           </a>
           <p>Kampala's premier destination for hair and beauty services, proudly serving men and women since 2021.</p>
