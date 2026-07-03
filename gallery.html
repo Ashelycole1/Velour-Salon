@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Explore the Velour Salon hair gallery — showcasing the best cuts, custom colours, braids, and grooming in Kampala." />
   <title>Gallery | Velour Salon</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -16,7 +20,7 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+        <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo" loading="lazy">
         VELOUR<span>SALON</span>
       </a>
       <ul class="nav-links">
@@ -48,6 +52,9 @@
     <a href="stylists.html">Stylists</a>
     <a href="gallery.html" class="active">Gallery</a>
     <a href="contact.html">Contact</a>
+    <button class="theme-toggle" id="mobile-theme-toggle" style="margin: 0.5rem auto 0; display: flex; gap: 0.5rem; justify-content: center; align-items: center; width: 100%; border: 1px solid var(--border-clr); padding: 0.75rem; border-radius: var(--radius-sm); background: transparent; color: var(--text-color); font-family: var(--font-body); font-size: 1rem; cursor: pointer;">
+      <i class="fas fa-moon"></i> Theme
+    </button>
     <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:0.5rem;">Book Appointment</a>
   </div>
 
@@ -75,7 +82,7 @@
         
         <!-- Item 1: Braided Updo (Women) -->
         <figure class="gallery-card" data-category="women braid">
-          <img src="assets/images/women/women's style 1.jpg" alt="Braided Updo">
+          <img src="assets/images/women/women's style 1.jpg" alt="Braided Updo" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Braided Updo</h4>
             <p>Elegant formal styling.</p>
@@ -84,7 +91,7 @@
 
         <!-- Item 2: Vivid Colour (Women, Color - Tall) -->
         <figure class="gallery-card gallery-item-tall" data-category="women color">
-          <img src="assets/images/women/women's style 2.jpg" alt="Vivid Colour">
+          <img src="assets/images/women/women's style 2.jpg" alt="Vivid Colour" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Vivid Colour</h4>
             <p>Bold transformations.</p>
@@ -93,7 +100,7 @@
 
         <!-- Item 3: Classic Fade (Men - Tall) -->
         <figure class="gallery-card gallery-item-tall" data-category="men">
-          <img src="assets/images/men/men's style 1.jpg" alt="Classic Fade">
+          <img src="assets/images/men/men's style 1.jpg" alt="Classic Fade" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Classic Fade</h4>
             <p>Precision taper finish.</p>
@@ -102,7 +109,7 @@
 
         <!-- Item 4: Knotless Braids (Women, Braid) -->
         <figure class="gallery-card" data-category="women braid">
-          <img src="assets/images/women/women's style 3.jpg" alt="Knotless Braids">
+          <img src="assets/images/women/women's style 3.jpg" alt="Knotless Braids" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Knotless Braids</h4>
             <p>Low-tension protective style.</p>
@@ -111,7 +118,7 @@
 
         <!-- Item 5: Silk Press (Women) -->
         <figure class="gallery-card" data-category="women">
-          <img src="assets/images/women/women's style 4.jpg" alt="Silk Press">
+          <img src="assets/images/women/women's style 4.jpg" alt="Silk Press" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Silk Press</h4>
             <p>Smooth, high-shine styling.</p>
@@ -120,7 +127,7 @@
 
         <!-- Item 6: Modern Pompadour (Men) -->
         <figure class="gallery-card" data-category="men">
-          <img src="assets/images/men/men's style 2.jpg" alt="Modern Pompadour">
+          <img src="assets/images/men/men's style 2.jpg" alt="Modern Pompadour" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Modern Pompadour</h4>
             <p>Classic volume, modern twist.</p>
@@ -129,7 +136,7 @@
 
         <!-- Item 7: Soft Curls (Women - Tall) -->
         <figure class="gallery-card gallery-item-tall" data-category="women">
-          <img src="assets/images/women/women's style 5.jpg" alt="Soft Curls">
+          <img src="assets/images/women/women's style 5.jpg" alt="Soft Curls" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Soft Curls</h4>
             <p>Glamorous waves and curls.</p>
@@ -138,7 +145,7 @@
 
         <!-- Item 8: Beard Sculpting (Men) -->
         <figure class="gallery-card" data-category="men">
-          <img src="assets/images/men/men's style 3.jpg" alt="Beard Sculpting">
+          <img src="assets/images/men/men's style 3.jpg" alt="Beard Sculpting" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Beard Sculpting</h4>
             <p>Expert shaping and grooming.</p>
@@ -147,7 +154,7 @@
 
         <!-- Item 9: Buzz Cut (Men - Tall) -->
         <figure class="gallery-card gallery-item-tall" data-category="men">
-          <img src="assets/images/men/men's style 4.jpg" alt="Buzz Cut">
+          <img src="assets/images/men/men's style 4.jpg" alt="Buzz Cut" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Buzz Cut</h4>
             <p>Clean, low-maintenance cut.</p>
@@ -156,7 +163,7 @@
 
         <!-- Item 10: Short Pixie (Women) -->
         <figure class="gallery-card" data-category="women">
-          <img src="assets/images/women/women's style 6.jpg" alt="Short Pixie">
+          <img src="assets/images/women/women's style 6.jpg" alt="Short Pixie" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Short Pixie</h4>
             <p>Modern and edgy short cut.</p>
@@ -165,7 +172,7 @@
 
         <!-- Item 11: Top Knot Fade (Men) -->
         <figure class="gallery-card" data-category="men">
-          <img src="assets/images/men/men's style 5.jpg" alt="Top Knot Fade">
+          <img src="assets/images/men/men's style 5.jpg" alt="Top Knot Fade" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Top Knot Fade</h4>
             <p>Versatile long top with sharp sides.</p>
@@ -174,7 +181,7 @@
 
         <!-- Item 12: Clean Shave (Men) -->
         <figure class="gallery-card" data-category="men">
-          <img src="assets/images/men/men's style 6.jpg" alt="Clean Shave">
+          <img src="assets/images/men/men's style 6.jpg" alt="Clean Shave" width="400" height="400" loading="lazy">
           <figcaption>
             <h4>Clean Shave</h4>
             <p>Smooth, professional finish.</p>
@@ -200,7 +207,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+            <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo" loading="lazy">
             VELOUR<span>SALON</span>
           </a>
           <p>Kampala's premier destination for hair and beauty services, proudly serving men and women since 2021.</p>
