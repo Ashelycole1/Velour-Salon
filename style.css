@@ -62,8 +62,8 @@
   --bg-color: var(--ink);
   --text-color: var(--stone);
   --text-title: var(--ivory);
-  --accent-color: var(--amber);
-  --accent-hover: var(--amber-deep);
+  --accent-color: #D18E66; /* Lighter amber for contrast */
+  --accent-hover: #E3A886; /* Even lighter for hover */
   --card-bg: var(--umber);
   --nav-bg: rgba(28, 20, 16, 0.95);
   --border-clr: rgba(250, 246, 240, 0.12);
