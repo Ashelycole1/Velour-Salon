@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Velour Salon — Premium hair and beauty atelier in Kampala. Book your appointment online today." />
+  <meta name="description"
+    content="Velour Salon — Premium hair and beauty atelier in Kampala. Book your appointment online today." />
   <title>Velour Salon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <!-- Theme Switcher Script (Head inclusion prevents flash) -->
   <script src="theme.js"></script>
 </head>
+
 <body>
 
   <!-- NAVIGATION-->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo" id="nav-logo">
-        <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+        <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo"
+          loading="lazy">
         VELOUR<span>SALON</span>
       </a>
 
@@ -49,7 +59,12 @@
     <a href="stylists.html" id="mob-stylists">Stylists</a>
     <a href="gallery.html" id="mob-gallery">Gallery</a>
     <a href="contact.html" id="mob-contact">Contact</a>
-    <a href="booking.html" class="btn btn-primary" id="mob-cta" style="text-align:center;margin-top:0.5rem;">Book Appointment</a>
+    <button class="theme-toggle" id="mobile-theme-toggle"
+      style="margin: 0.5rem auto 0; display: flex; gap: 0.5rem; justify-content: center; align-items: center; width: 100%; border: 1px solid var(--border-clr); padding: 0.75rem; border-radius: var(--radius-sm); background: transparent; color: var(--text-color); font-family: var(--font-body); font-size: 1rem; cursor: pointer;">
+      <i class="fas fa-moon"></i> Theme
+    </button>
+    <a href="booking.html" class="btn btn-primary" id="mob-cta" style="text-align:center;margin-top:0.5rem;">Book
+      Appointment</a>
   </div>
 
   <!-- HERO SECTION -->
@@ -63,7 +78,8 @@
         </h1>
 
         <p id="hero-description">
-          We combine detailed consultations with unhurried appointments to give your hair the individual consideration it requires.
+          We combine detailed consultations with unhurried appointments to give your hair the individual consideration
+          it requires.
         </p>
 
         <div class="hero-actions">
@@ -77,7 +93,7 @@
             <span class="stat-label">Founded</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">6</span>
+            <span class="stat-num">8</span>
             <span class="stat-label">Stylists</span>
           </div>
           <div class="stat-item">
@@ -88,7 +104,8 @@
       </div>
       <div class="hero-image-panel">
         <div class="hero-image-bg-offset"></div>
-        <img src="assets/images/women/women's style 5.jpg" alt="" aria-hidden="true" class="hero-img">
+        <img src="assets/images/women/women's style 5.jpg" alt="" aria-hidden="true" class="hero-img" width="450"
+          height="480" fetchpriority="high">
       </div>
     </div>
   </header>
@@ -99,19 +116,22 @@
       <p class="eyebrow">Why Choose Us</p>
       <h2 class="section-title" id="features-title">The Velour Difference</h2>
       <p class="section-lede">
-        We combine skilled craftsmanship, premium products, and a seamless digital booking experience — all in one place.
+        We combine skilled craftsmanship, premium products, and a seamless digital booking experience — all in one
+        place.
       </p>
 
       <div class="features-grid" id="features-grid">
         <article class="feature-card" id="feature-booking">
           <span class="feature-icon">01</span>
           <h3>Online Booking</h3>
-          <p>Reserve your slot anytime, anywhere. No phone calls, no waiting — just pick your service, stylist, and time.</p>
+          <p>Reserve your slot anytime, anywhere. No phone calls, no waiting — just pick your service, stylist, and
+            time.</p>
         </article>
         <article class="feature-card" id="feature-stylists">
           <span class="feature-icon">02</span>
           <h3>Expert Stylists</h3>
-          <p>Our certified team specialises in cuts, colour treatments, braids, locs, and advanced styling for all hair types.</p>
+          <p>Our certified team specialises in cuts, colour treatments, braids, locs, and advanced styling for all hair
+            types.</p>
         </article>
         <article class="feature-card" id="feature-gender">
           <span class="feature-icon">03</span>
@@ -126,7 +146,8 @@
         <article class="feature-card" id="feature-hygiene">
           <span class="feature-icon">05</span>
           <h3>Clean &amp; Safe</h3>
-          <p>Fully sanitised stations, fresh towels per client, and strict hygiene protocols maintained at all times.</p>
+          <p>Fully sanitised stations, fresh towels per client, and strict hygiene protocols maintained at all times.
+          </p>
         </article>
         <article class="feature-card" id="feature-hours">
           <span class="feature-icon">06</span>
@@ -244,12 +265,14 @@
     <div class="container text-center">
       <p class="eyebrow">Meet the Team</p>
       <h2 class="section-title" id="stylists-teaser-title">Our Expert Stylists</h2>
-      <p class="section-lede">Each member of our team brings passion, precision, and years of experience to every appointment.</p>
+      <p class="section-lede">Each member of our team brings passion, precision, and years of experience to every
+        appointment.</p>
 
       <div class="stylist-grid mt-4">
         <div class="stylist-card" id="stylist-amara">
           <div class="stylist-avatar f">
-            <img src="assets/images/women/female stylist 1.jpg" alt="Amara Nakato">
+            <img src="assets/images/women/female stylist 1.jpg" alt="Amara Nakato" width="400" height="400"
+              loading="lazy">
           </div>
           <div class="stylist-info">
             <h3>Amara Nakato</h3>
@@ -264,7 +287,8 @@
         </div>
         <div class="stylist-card" id="stylist-david">
           <div class="stylist-avatar m">
-            <img src="assets/images/men/male stylist 1.jpg" alt="David Ssemakula">
+            <img src="assets/images/men/male stylist 1.jpg" alt="David Ssemakula" width="400" height="400"
+              loading="lazy">
           </div>
           <div class="stylist-info">
             <h3>David Ssemakula</h3>
@@ -279,7 +303,8 @@
         </div>
         <div class="stylist-card" id="stylist-grace">
           <div class="stylist-avatar f">
-            <img src="assets/images/women/female stylist 2.jpg" alt="Grace Atim">
+            <img src="assets/images/women/female stylist 2.jpg" alt="Grace Atim" width="400" height="400"
+              loading="lazy">
           </div>
           <div class="stylist-info">
             <h3>Grace Atim</h3>
@@ -294,7 +319,7 @@
         </div>
         <div class="stylist-card" id="stylist-brian">
           <div class="stylist-avatar m">
-            <img src="assets/images/men/male stylist 2.jpg" alt="Brian Kato">
+            <img src="assets/images/men/male stylist 2.jpg" alt="Brian Kato" width="400" height="400" loading="lazy">
           </div>
           <div class="stylist-info">
             <h3>Brian Kato</h3>
@@ -335,10 +360,12 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="assets/logo.jpeg" alt="Velour Salon Logo">
+            <img src="assets/logo.jpeg" alt="Velour Salon Logo" width="45" height="45" alt="Velour Salon Logo"
+              loading="lazy">
             VELOUR<span>SALON</span>
           </a>
-          <p>Kampala's premier destination for hair and beauty services, proudly serving men and women with excellence since 2021.</p>
+          <p>Kampala's premier destination for hair and beauty services, proudly serving men and women with excellence
+            since 2021.</p>
         </div>
 
         <div class="footer-col">
@@ -411,7 +438,7 @@
     });
 
     // --- Tab Switcher (Services Preview) ---
-    const tabBtns  = document.querySelectorAll('.tab-btn');
+    const tabBtns = document.querySelectorAll('.tab-btn');
     const tabPanels = document.querySelectorAll('.tab-panel');
 
     tabBtns.forEach(btn => {
@@ -445,4 +472,5 @@
   </script>
 
 </body>
+
 </html>
