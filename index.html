@@ -8,19 +8,80 @@
     content="Velour Salon — Premium hair and beauty atelier in Kampala. Book your appointment online today." />
   <title>Velour Salon</title>
 
+  <!-- Preconnect to font origins FIRST -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+
+  <!-- CRITICAL: Inline above-the-fold CSS to prevent render-blocking -->
+  <style>
+    /* Minimal critical CSS for above-the-fold paint */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#FAF6F0;color:#3D2F26;line-height:1.6;font-size:16px}
+    [data-theme="dark"] body,[data-theme="dark"]{background:#1C1410;color:#E8DFD2}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:90%;max-width:1180px;margin:0 auto}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,246,240,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(28,20,16,.12);transition:.3s cubic-bezier(.22,1,.36,1)}
+    [data-theme="dark"] .navbar{background:rgba(28,20,16,.95)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces',Georgia,serif;font-size:1.5rem;font-weight:500;letter-spacing:2px;color:#B8754A}
+    .nav-logo img{height:45px;width:45px;object-fit:cover;border-radius:50%;border:2px solid #B8754A}
+    .nav-logo span{color:#1C1410;font-weight:400}
+    [data-theme="dark"] .nav-logo span{color:#FAF6F0}
+    .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:#B8754A;transition:.3s cubic-bezier(.22,1,.36,1)}
+    .nav-links{display:none}
+    .mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:#FAF6F0;border-top:1px solid rgba(28,20,16,.12);padding:1.5rem 2rem;z-index:999;flex-direction:column;gap:1rem}
+    [data-theme="dark"] .mobile-nav{background:#1C1410}
+    .mobile-nav.open{display:flex}
+    .hero{min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 60px;background:#FAF6F0}
+    [data-theme="dark"] .hero{background:#1C1410}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
+    .hero h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:500;line-height:1.1;color:#1C1410;margin-bottom:1.25rem}
+    [data-theme="dark"] .hero h1{color:#FAF6F0}
+    .hero h1 em{font-style:italic;font-family:'Fraunces',Georgia,serif;color:#96572F}
+    [data-theme="dark"] .hero h1 em{color:#E3A886}
+    .hero p{font-size:1.05rem;color:#3D2F26;opacity:.85;max-width:48ch;margin-bottom:2.5rem;line-height:1.8}
+    [data-theme="dark"] .hero p{color:#E8DFD2}
+    .eyebrow{font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#96572F;margin-bottom:.5rem}
+    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn{display:inline-block;padding:.75rem 2rem;border-radius:6px;font-family:'Inter',-apple-system,sans-serif;font-size:.9rem;font-weight:500;cursor:pointer;transition:all .3s cubic-bezier(.22,1,.36,1);border:none;text-align:center}
+    .btn-primary{background:#1C1410;color:#FAF6F0;border:1px solid #1C1410}
+    .btn-ghost{background:transparent;border:1px solid rgba(28,20,16,.12);color:#3D2F26}
+    [data-theme="dark"] .btn-ghost{color:#E8DFD2;border-color:rgba(250,246,240,.12)}
+    .hero-stats{margin-top:3rem;display:flex;gap:2.5rem;flex-wrap:wrap;border-top:1px solid rgba(28,20,16,.12);padding-top:1.5rem}
+    [data-theme="dark"] .hero-stats{border-top-color:rgba(250,246,240,.12)}
+    .stat-num{font-family:'Fraunces',Georgia,serif;font-size:1.8rem;font-weight:500;color:#1C1410;display:block}
+    [data-theme="dark"] .stat-num{color:#FAF6F0}
+    .stat-label{font-size:.75rem;color:#3D2F26;opacity:.7;letter-spacing:1px;text-transform:uppercase}
+    .hero-image-panel{position:relative;display:flex;justify-content:center;align-items:center;width:100%}
+    .hero-image-bg-offset{position:absolute;top:15px;left:15px;width:100%;height:100%;background:#E8DFD2;border-radius:4px 140px 4px 140px;z-index:1}
+    .hero-img{width:100%;max-width:450px;height:480px;object-fit:cover;border-radius:4px 140px 4px 140px;z-index:2;box-shadow:0 12px 32px rgba(28,20,16,.10)}
+    @media(max-width:920px){.hero-img{height:380px}}
+    .theme-toggle{background:none;border:1px solid rgba(28,20,16,.12);color:#B8754A;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s cubic-bezier(.22,1,.36,1);font-size:1.1rem}
+    [data-theme="dark"] .theme-toggle{border-color:rgba(250,246,240,.12);color:#D18E66}
+  </style>
+
+  <!-- Load full stylesheet async (non-blocking) -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <!-- Load Google Fonts async (non-blocking) -->
+  <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome for Icons -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-  <!-- Theme Switcher Script (Head inclusion prevents flash) -->
-    <script>!function(){var e=localStorage.getItem("velour-theme")||"light";document.documentElement.setAttribute("data-theme",e)}();</script>
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+  </noscript>
+
+  <!-- Theme Switcher — inline to prevent FOUC, no external dependency -->
+  <script>!function(){var e=localStorage.getItem("velour-theme")||"light";document.documentElement.setAttribute("data-theme",e)}();</script>
   <script src="theme.js" defer></script>
 </head>
+
 
 <body>
 
@@ -29,7 +90,7 @@
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo" id="nav-logo">
         <img src="assets/logo-small.jpeg" alt="Velour Salon Logo" width="45" height="45"
-          loading="lazy">
+          loading="eager" fetchpriority="low">
         VELOUR<span>SALON</span>
       </a>
 
@@ -43,7 +104,9 @@
 
         <li>
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Mode">
-            <i class="fas fa-moon"></i>
+            <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
           </button>
         </li>
       </ul>
@@ -63,7 +126,9 @@
     <a href="contact.html" id="mob-contact">Contact</a>
     <button class="theme-toggle" id="mobile-theme-toggle"
       style="margin: 0.5rem auto 0; display: flex; gap: 0.5rem; justify-content: center; align-items: center; width: 100%; border: 1px solid var(--border-clr); padding: 0.75rem; border-radius: var(--radius-sm); background: transparent; color: var(--text-color); font-family: var(--font-body); font-size: 1rem; cursor: pointer;">
-      <i class="fas fa-moon"></i> Theme
+      <svg id="mobile-theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg> Theme
     </button>
     <a href="booking.html" class="btn btn-primary" id="mob-cta" style="text-align:center;margin-top:0.5rem;">Book
       Appointment</a>
