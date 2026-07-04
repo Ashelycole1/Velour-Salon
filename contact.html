@@ -8,14 +8,52 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <!-- Load full stylesheet async -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <!-- Load Google Fonts async -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=optional"></noscript>
+
   <!-- Font Awesome for Icons -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-    <script>!function(){var e=localStorage.getItem("velour-theme")||"light";document.documentElement.setAttribute("data-theme",e)}();</script>
+
+  <script>!function(){var e=localStorage.getItem("velour-theme")||"light";document.documentElement.setAttribute("data-theme",e)}();</script>
   <script src="theme.js" defer></script>
   <style>
+    /* CRITICAL INLINE CSS */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#FAF6F0;color:#3D2F26;line-height:1.6;font-size:16px}
+    [data-theme="dark"] body,[data-theme="dark"]{background:#1C1410;color:#E8DFD2}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:90%;max-width:1180px;margin:0 auto}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,246,240,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(28,20,16,.12);transition:.3s cubic-bezier(.22,1,.36,1)}
+    [data-theme="dark"] .navbar{background:rgba(28,20,16,.95)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces',Georgia,serif;font-size:1.5rem;font-weight:500;letter-spacing:2px;color:#96572F}
+    .nav-logo img{height:45px;width:45px;object-fit:cover;border-radius:50%;border:2px solid #96572F}
+    .nav-logo span{color:#1C1410;font-weight:400}
+    [data-theme="dark"] .nav-logo span{color:#FAF6F0}
+    .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:#B8754A;transition:.3s cubic-bezier(.22,1,.36,1)}
+    .theme-toggle{background:none;border:1px solid rgba(28,20,16,.12);color:#B8754A;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem}
+    [data-theme="dark"] .theme-toggle{border-color:rgba(250,246,240,.12);color:#D18E66}
+    .nav-links{display:none}
+    .page-header{padding:140px 0 70px;text-align:center;background:#E8DFD2;position:relative;overflow:hidden}
+    [data-theme="dark"] .page-header{background:#3D2F26}
+    .page-header h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2.5rem,6vw,4rem);color:#1C1410}
+    [data-theme="dark"] .page-header h1{color:#FAF6F0}
+    .page-header p{color:#3D2F26;margin:.75rem auto 0;max-width:500px}
+    [data-theme="dark"] .page-header p{color:#E8DFD2}
+    .eyebrow{font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#96572F;margin-bottom:.5rem}
+    .btn{display:inline-block;padding:.75rem 2rem;border-radius:6px;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:500;text-align:center;border:none}
+    .btn-primary{background:#1C1410;color:#FAF6F0}
+    @media(min-width:1024px){.nav-links{display:flex;list-style:none;gap:2rem;align-items:center}.hamburger{display:none}}
+
     /* Contact page layout styles */
     .contact-grid {
       display: grid;

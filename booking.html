@@ -34,7 +34,7 @@
       font-family: var(--font-body);
       font-size: 0.85rem;
       font-weight: 600;
-      color: var(--accent-hover);
+      color: var(--text-title);
       margin-bottom: 0.6rem;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -88,7 +88,7 @@
         <li><a href="stylists.html" id="nav-stylists">Stylists</a></li>
         <li><a href="gallery.html" id="nav-gallery">Gallery</a></li>
         <li><a href="contact.html" id="nav-contact">Contact</a></li>
-        <li><a href="booking.html" class="active" id="nav-booking">Book Now</a></li>
+
         <li><a href="booking.html" class="btn btn-primary nav-cta" id="nav-cta-btn">Book Appointment</a></li>
 
         <li>
@@ -116,6 +116,7 @@
     <a href="booking.html" class="btn btn-primary" style="text-align:center;margin-top:0.5rem;">Book Appointment</a>
   </div>
 
+  <main id="main-content">
   <!-- PAGE HEADER -->
   <header class="page-header" id="page-header">
     <div class="container">
@@ -124,7 +125,7 @@
       <p>Follow our simple wizard flow to request your appointment and receive confirmation.</p>
 
       <!-- Steps Wizard Indicator -->
-      <div class="booking-steps" id="booking-steps-bar" role="tablist" aria-label="Booking steps">
+      <div class="booking-steps" id="booking-steps-bar" aria-label="Booking steps progress">
         <div class="step-indicator active" data-step="1" id="indicator-step-1">
           <span class="step-number">1</span>
           <span class="step-text">Service</span>
@@ -155,7 +156,7 @@
 
         <!-- LEFT: Info Panel -->
         <aside aria-label="Booking information">
-          <h3 id="booking-form-title">Appointment Details</h3>
+          <h2 id="booking-form-title">Appointment Details</h2>
           <p>All bookings are finalized via phone or email. Please arrive 5 minutes before your scheduled appointment.
           </p>
 
@@ -419,6 +420,8 @@
       </div><!-- /booking-wrapper -->
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer" id="main-footer">
