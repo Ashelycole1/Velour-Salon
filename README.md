@@ -1,6 +1,18 @@
 # Velour Salon
 
+![Velour Salon Preview](./assets/preview.png)
+
 A considered hair and beauty atelier in Kampala — premium services for men and women, presented through a refined, editorial web experience.
+
+---
+
+## Setup & Running Locally
+
+1. Clone or download this repository to your local machine.
+2. Navigate to the project folder: `cd VELOUR SALON`
+3. Open `index.html` in any modern web browser (e.g., Chrome, Safari, Firefox).
+   *Alternatively, use a local server like VS Code Live Server for the best experience.*
+4. The site is fully functional without any build steps or package managers.
 
 ---
 
@@ -100,6 +112,15 @@ The UI follows an **editorial atelier aesthetic** — quiet, considered, and pre
 - Service rows over cards — scannable, information-dense, and more editorial
 - 3:4 portrait aspect ratio on all stylist photos for consistent editorial framing
 - Micro-animations on hover without distracting shadow-pops or translate effects
+
+---
+
+## Performance (Lighthouse)
+
+The site is heavily optimized for zero Cumulative Layout Shift (CLS) and minimal blocking resources, achieving perfect 100/100 Lighthouse scores:
+
+![Lighthouse Score 1](./assets/lighthouse/light1.png)
+![Lighthouse Score 2](./assets/lighthouse/light2.png)
 
 ---
 
