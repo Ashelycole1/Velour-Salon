@@ -66,11 +66,10 @@
     @media(min-width:1024px){.nav-links{display:flex;list-style:none}.hamburger{display:none}.hero-content{max-width:720px}}
   </style>
 
-  <!-- Load full stylesheet async (non-blocking) -->
-  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <!-- Full stylesheet — loaded synchronously to guarantee zero CLS -->
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Load Google Fonts async with display=optional to prevent CLS -->
+  <!-- Load Google Fonts async with display=optional to prevent font CLS -->
   <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=optional"
     as="style" onload="this.onload=null;this.rel='stylesheet'">
