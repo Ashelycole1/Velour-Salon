@@ -66,8 +66,9 @@
     @media(min-width:1024px){.nav-links{display:flex;list-style:none}.hamburger{display:none}.hero-content{max-width:720px}}
   </style>
 
-  <!-- Full stylesheet — loaded synchronously to guarantee zero CLS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Load full stylesheet async (non-blocking) -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 
   <!-- Load Google Fonts async with display=optional to prevent font CLS -->
   <link rel="preload"
