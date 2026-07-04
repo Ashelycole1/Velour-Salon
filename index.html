@@ -38,9 +38,9 @@
     .hero{min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 60px;background:#FAF6F0}
     [data-theme="dark"] .hero{background:#1C1410}
     .hero-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
-    .hero h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:500;line-height:1.1;color:#1C1410;margin-bottom:1.25rem}
+    .hero h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:500;line-height:1.1;color:#1C1410;margin-bottom:1.25rem;font-size-adjust:0.5}
     [data-theme="dark"] .hero h1{color:#FAF6F0}
-    .hero h1 em{font-style:italic;font-family:'Fraunces',Georgia,serif;color:#96572F}
+    .hero h1 em{font-style:italic;font-family:'Fraunces',Georgia,serif;color:#96572F;font-size-adjust:0.5}
     [data-theme="dark"] .hero h1 em{color:#E3A886}
     .hero p{font-size:1.05rem;color:#3D2F26;opacity:.85;max-width:48ch;margin-bottom:2.5rem;line-height:1.8}
     [data-theme="dark"] .hero p{color:#E8DFD2}
@@ -67,13 +67,13 @@
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="style.css"></noscript>
 
-  <!-- Load Google Fonts async (non-blocking) -->
+  <!-- Load Google Fonts async with display=optional to prevent CLS -->
   <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=optional"
     as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=optional"
       rel="stylesheet">
   </noscript>
 
